@@ -6,6 +6,7 @@ import com.teksen.personmanagementsystem.service.impl.PersonIntegrationService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
@@ -18,6 +19,7 @@ import java.util.List;
 @RequestMapping(path = "api/v1/person")
 @AllArgsConstructor
 @Tag(name = "Person", description = "Person Management System API")
+@SecurityRequirement(name = "personmsapi")
 public class PersonController {
 
     private final PersonService personService;
@@ -83,11 +85,20 @@ public class PersonController {
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Person deleted"),
             @ApiResponse(responseCode = "400", description = "Invalid id supplied"),
-            @ApiResponse(responseCode = "404", description = "Person not found")
+            @ApiResponse(responseCode = "404", description = "Person not found"),
+            @ApiResponse(responseCode = "403", description = "Forbidden"),
+            @ApiResponse(responseCode = "401", description = "Unauthorized")
     })
     public ResponseEntity<String> deleteById(@PathVariable Long id){
         personService.deleteById(id);
         return ResponseEntity.ok("Person deleted");
     }
+
+    // TODO add Flyway migration
+    // TODO add Basic Authentication
+    // TODO add unit tests and integration tests
+    // TODO just look at pagination
+    // TODO monitor the application with Actuator
+    // TODO rate limit the API
 
 }
