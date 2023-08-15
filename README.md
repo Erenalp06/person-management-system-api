@@ -1,9 +1,20 @@
 # Person Management System API
 
-![GitHub repo size](https://img.shields.io/github/repo-size/Erenalp06/person-management-system-api)
+
 ![GitHub stars](https://img.shields.io/github/stars/Erenalp06/person-management-system-api?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/Erenalp06/person-management-system-api?style=social)
+![GitHub repo size](https://img.shields.io/github/repo-size/Erenalp06/person-management-system-api)
+![License](https://img.shields.io/badge/license-MIT-blue)
+![Version](https://img.shields.io/badge/version-1.0.0-blue)
+
+
+![Profile views](https://komarev.com/ghpvc/?username=Erenalp06&color=brightgreen)
+![GitHub top language](https://img.shields.io/github/languages/top/Erenalp06/person-management-system-api)
+
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-blue?logo=linkedin)](https://www.linkedin.com/in/erenalp-teksen/)
 ![Twitter Follow](https://img.shields.io/twitter/follow/Erenalp11191435?style=social)
+
+
 
 The Person Management System API is a powerful Spring Boot application that allows seamless management of individuals through a comprehensive set of features,
 including listing, adding, and updating people in a database.
