@@ -93,11 +93,4 @@ public class PersonController {
         personService.deleteById(id);
         return ResponseEntity.ok("Person deleted");
     }
-
-
-    // TODO monitor the application with Actuator
-    // TODO add unit tests and integration tests
-    // TODO just look at pagination
-    // TODO rate limit the API
-
 }

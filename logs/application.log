@@ -3298,3 +3298,90 @@ Caused by: org.postgresql.util.PSQLException: ERROR: syntax error at or near "ne
 07:45:29.177 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 07:45:29.183 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 07:45:29.190 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+07:55:00.352 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+07:55:00.394 [restartedMain] INFO  c.t.p.PersonManagementSystemApplication - Starting PersonManagementSystemApplication using Java 19.0.1 with PID 1984 (C:\Users\erena\Desktop\SpringBootProjeleri\person-management-system\target\classes started by erena in C:\Users\erena\Desktop\SpringBootProjeleri\person-management-system)
+07:55:00.394 [restartedMain] DEBUG c.t.p.PersonManagementSystemApplication - Running with Spring Boot v3.1.2, Spring v6.0.11
+07:55:00.395 [restartedMain] INFO  c.t.p.PersonManagementSystemApplication - No active profile set, falling back to 1 default profile: "default"
+07:55:00.442 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+07:55:00.442 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+07:55:01.636 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+07:55:01.717 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 73 ms. Found 3 JPA repository interfaces.
+07:55:02.542 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9643 (http)
+07:55:02.553 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9643"]
+07:55:02.554 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+07:55:02.554 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.11]
+07:55:02.632 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+07:55:02.634 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2191 ms
+07:55:02.928 [restartedMain] INFO  o.f.c.i.license.VersionPrinter - Flyway Community Edition 9.16.3 by Redgate
+07:55:02.928 [restartedMain] INFO  o.f.c.i.license.VersionPrinter - See release notes here: https://rd.gt/416ObMi
+07:55:02.928 [restartedMain] INFO  o.f.c.i.license.VersionPrinter - 
+07:55:02.935 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+07:55:03.074 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7cef4d7d
+07:55:03.075 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+07:55:03.086 [restartedMain] INFO  o.f.c.i.d.base.BaseDatabaseType - Database: jdbc:postgresql://localhost:5432/person_db (PostgreSQL 15.2)
+07:55:03.123 [restartedMain] INFO  o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.024s)
+07:55:03.346 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "public": 0.2
+07:55:03.346 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Schema "public" is up to date. No migration necessary.
+07:55:03.429 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+07:55:03.506 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.6.Final
+07:55:03.508 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+07:55:03.643 [restartedMain] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+07:55:03.758 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+07:55:03.975 [restartedMain] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+07:55:04.521 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+07:55:04.557 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+07:55:04.973 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+07:55:04.995 [restartedMain] INFO  o.s.s.p.JdbcUserDetailsManager - No authentication manager set. Reauthentication of users when changing passwords will not be performed.
+07:55:05.309 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 14 endpoint(s) beneath base path '/actuator'
+07:55:05.353 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4f87d108, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@15ec2745, org.springframework.security.web.context.SecurityContextHolderFilter@6c0e320f, org.springframework.security.web.header.HeaderWriterFilter@567497d4, org.springframework.security.web.authentication.logout.LogoutFilter@4c44a4a3, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@48825673, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@45c8295e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@72b1c3c8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2e2f172b, org.springframework.security.web.access.ExceptionTranslationFilter@2c171f5a, org.springframework.security.web.access.intercept.AuthorizationFilter@37254fd2]
+07:55:05.615 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+07:55:05.661 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9643"]
+07:55:05.676 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9643 (http) with context path ''
+07:55:05.690 [restartedMain] INFO  c.t.p.PersonManagementSystemApplication - Started PersonManagementSystemApplication in 5.607 seconds (process running for 6.517)
+07:55:05.968 [RMI TCP Connection(7)-192.168.163.1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+07:55:05.968 [RMI TCP Connection(7)-192.168.163.1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+07:55:05.969 [RMI TCP Connection(7)-192.168.163.1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+07:55:12.091 [http-nio-9643-exec-1] INFO  c.t.p.service.impl.PersonServiceImpl - ------------- Going to sleep for 5 seconds to simulate Backend Delay -----------
+07:55:17.101 [http-nio-9643-exec-1] INFO  c.t.p.service.impl.PersonServiceImpl - Getting all persons from cache or database
+07:55:17.201 [http-nio-9643-exec-1] INFO  c.t.p.service.impl.PersonServiceImpl - Retrieved all persons from database
+07:56:47.385 [http-nio-9643-exec-3] DEBUG c.t.p.service.impl.PersonServiceImpl - Person saved with id : 7
+07:56:49.481 [http-nio-9643-exec-8] INFO  c.t.p.service.impl.PersonServiceImpl - ------------- Going to sleep for 5 seconds to simulate Backend Delay -----------
+07:56:54.493 [http-nio-9643-exec-8] INFO  c.t.p.service.impl.PersonServiceImpl - Getting all persons from cache or database
+07:56:54.496 [http-nio-9643-exec-8] INFO  c.t.p.service.impl.PersonServiceImpl - Retrieved all persons from database
+07:59:15.081 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+07:59:15.086 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+07:59:15.089 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+08:01:28.543 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.teksen.personmanagementsystem.PersonManagementSystemApplicationTests]: PersonManagementSystemApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+08:01:28.730 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.teksen.personmanagementsystem.PersonManagementSystemApplication for test class com.teksen.personmanagementsystem.PersonManagementSystemApplicationTests
+08:01:29.303 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+08:01:29.345 [main] INFO  c.t.p.PersonManagementSystemApplicationTests - Starting PersonManagementSystemApplicationTests using Java 19.0.1 with PID 2260 (started by erena in C:\Users\erena\Desktop\SpringBootProjeleri\person-management-system)
+08:01:29.346 [main] DEBUG c.t.p.PersonManagementSystemApplicationTests - Running with Spring Boot v3.1.2, Spring v6.0.11
+08:01:29.347 [main] INFO  c.t.p.PersonManagementSystemApplicationTests - No active profile set, falling back to 1 default profile: "default"
+08:01:31.433 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+08:01:31.542 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 96 ms. Found 3 JPA repository interfaces.
+08:01:32.594 [main] INFO  o.f.c.i.license.VersionPrinter - Flyway Community Edition 9.16.3 by Redgate
+08:01:32.595 [main] INFO  o.f.c.i.license.VersionPrinter - See release notes here: https://rd.gt/416ObMi
+08:01:32.595 [main] INFO  o.f.c.i.license.VersionPrinter - 
+08:01:32.614 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+08:01:33.042 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@18e6b72b
+08:01:33.045 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+08:01:33.066 [main] INFO  o.f.c.i.d.base.BaseDatabaseType - Database: jdbc:postgresql://localhost:5432/person_db (PostgreSQL 15.2)
+08:01:33.137 [main] INFO  o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.043s)
+08:01:33.208 [main] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "public": 0.2
+08:01:33.208 [main] INFO  o.f.core.internal.command.DbMigrate - Schema "public" is up to date. No migration necessary.
+08:01:33.343 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+08:01:33.424 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.6.Final
+08:01:33.428 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+08:01:33.619 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+08:01:33.752 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+08:01:34.061 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+08:01:34.795 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+08:01:34.829 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+08:01:35.581 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+08:01:35.617 [main] INFO  o.s.s.p.JdbcUserDetailsManager - No authentication manager set. Reauthentication of users when changing passwords will not be performed.
+08:01:35.817 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@50165a6d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5ec921f1, org.springframework.security.web.context.SecurityContextHolderFilter@586a9fe1, org.springframework.security.web.header.HeaderWriterFilter@7ef570be, org.springframework.security.web.authentication.logout.LogoutFilter@57fe6f2d, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@c50503e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@20bc3e7f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@42516ce2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@172ca6a, org.springframework.security.web.access.ExceptionTranslationFilter@7a4c1a6c, org.springframework.security.web.access.intercept.AuthorizationFilter@7c070e78]
+08:01:36.876 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 14 endpoint(s) beneath base path '/actuator'
+08:01:36.983 [main] INFO  c.t.p.PersonManagementSystemApplicationTests - Started PersonManagementSystemApplicationTests in 8.059 seconds (process running for 10.339)
+08:01:37.911 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+08:01:37.915 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+08:01:37.919 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

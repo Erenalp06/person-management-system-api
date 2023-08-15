@@ -114,6 +114,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>person-management-system-api-v1.0</finalName>
 	</build>
 
 </project>
