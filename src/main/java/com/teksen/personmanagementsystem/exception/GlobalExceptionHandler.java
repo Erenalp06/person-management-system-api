@@ -1,8 +1,6 @@
 package com.teksen.personmanagementsystem.exception;
 
-import com.teksen.personmanagementsystem.exception.custom.PersonCanNotBeNullException;
-import com.teksen.personmanagementsystem.exception.custom.PersonIdCanNotBeNullException;
-import com.teksen.personmanagementsystem.exception.custom.PersonNotFoundException;
+import com.teksen.personmanagementsystem.exception.custom.*;
 import com.teksen.personmanagementsystem.exception.response.DefaultResponse;
 import com.teksen.personmanagementsystem.exception.response.ExceptionResponse;
 import org.springframework.http.HttpHeaders;
@@ -20,6 +18,7 @@ import org.springframework.web.server.ResponseStatusException;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @ControllerAdvice
@@ -33,39 +32,9 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
         return new ResponseEntity<>(message, statusCode);
     }
 
-    @ExceptionHandler(value = {PersonNotFoundException.class})
-    public ResponseEntity<DefaultResponse> handlePersonNotFoundException(PersonNotFoundException e){
-        String exceptionType = e.getClass().getSimpleName();
-        int status = e.getStatusCode().value();
-        DefaultResponse defaultResponse = DefaultResponse.builder()
-                .message(e.getMessage())
-                .exceptionType(exceptionType)
-                .status(status)
-                .build();
-        return new ResponseEntity<>(defaultResponse, e.getStatusCode());
-    }
-
-    @ExceptionHandler(value = {PersonCanNotBeNullException.class})
-    public ResponseEntity<DefaultResponse> handlePersonCanNotBeNullException(PersonCanNotBeNullException e){
-        String exceptionType = e.getClass().getSimpleName();
-        int status = e.getStatusCode().value();
-        DefaultResponse defaultResponse = DefaultResponse.builder()
-                .message(e.getMessage())
-                .exceptionType(exceptionType)
-                .status(status)
-                .build();
-        return new ResponseEntity<>(defaultResponse, e.getStatusCode());
-    }
-
-    @ExceptionHandler(value = {PersonIdCanNotBeNullException.class})
-    public ResponseEntity<DefaultResponse> handlePersonIdCanNotBeNullException(PersonIdCanNotBeNullException e){
-        String exceptionType = e.getClass().getSimpleName();
-        int status = e.getStatusCode().value();
-        DefaultResponse defaultResponse = DefaultResponse.builder()
-                .message(e.getMessage())
-                .exceptionType(exceptionType)
-                .status(status)
-                .build();
+    @ExceptionHandler(value = {CustomException.class})
+    public ResponseEntity<DefaultResponse> handleCustomException(CustomException e){
+        DefaultResponse defaultResponse = createDefaultResponseFromException(e, e.getStatusCode().value());
         return new ResponseEntity<>(defaultResponse, e.getStatusCode());
     }
 
@@ -90,5 +59,15 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
                 .build();
 
         return new ResponseEntity<>(exceptionResponse, HttpStatus.BAD_REQUEST);
+    }
+
+    private static DefaultResponse createDefaultResponseFromException(Exception e, int status) {
+        String exceptionType = e.getClass().getSimpleName();
+        return DefaultResponse.builder()
+                .message(e.getMessage())
+                .exceptionType(exceptionType)
+                .status(status)
+                .timestamp(new Date())
+                .build();
     }
 }

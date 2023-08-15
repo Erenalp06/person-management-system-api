@@ -1,7 +1,7 @@
 package com.teksen.personmanagementsystem.service.impl;
 
 import com.teksen.personmanagementsystem.dto.PersonDTO;
-import com.teksen.personmanagementsystem.exception.custom.PersonNotFoundException;
+import com.teksen.personmanagementsystem.exception.custom.person.PersonNotFoundException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;

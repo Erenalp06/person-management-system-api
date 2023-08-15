@@ -40,6 +40,14 @@ public class SecurityConfig {
                         .requestMatchers(HttpMethod.POST, ENDPOINT).hasAnyRole(ROLE.ADMIN.name())
                         .requestMatchers(HttpMethod.DELETE, ENDPOINT).hasAnyRole(ROLE.ADMIN.name())
                         .requestMatchers(HttpMethod.GET, "/swagger-ui/**", "/swagger-ui.html", "/v3/api-docs/**").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/api/v*/user/**").hasAnyRole(ROLE.ADMIN.name())
+                        .requestMatchers(HttpMethod.PUT, "/api/v*/user/**").hasAnyRole(ROLE.ADMIN.name())
+                        .requestMatchers(HttpMethod.POST, "/api/v*/user/**").hasAnyRole(ROLE.ADMIN.name())
+                        .requestMatchers(HttpMethod.DELETE, "/api/v*/user/**").hasAnyRole(ROLE.ADMIN.name())
+                        .requestMatchers(HttpMethod.GET, "/api/v*/authority/**").hasAnyRole(ROLE.ADMIN.name())
+                        .requestMatchers(HttpMethod.PUT, "/api/v*/authority/**").hasAnyRole(ROLE.ADMIN.name())
+                        .requestMatchers(HttpMethod.DELETE, "/api/v*/authority/**").hasAnyRole(ROLE.ADMIN.name())
+                        .requestMatchers(HttpMethod.POST, "/api/v*/authority/**").hasAnyRole(ROLE.ADMIN.name())
 
 
         );

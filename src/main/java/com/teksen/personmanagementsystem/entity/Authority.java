@@ -15,8 +15,16 @@ import lombok.NoArgsConstructor;
 public class Authority {
 
 
+    @SequenceGenerator(
+            name = "authority_sequence",
+            sequenceName = "authority_sequence",
+            allocationSize = 1
+    )
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "authority_sequence"
+    )
     private Long id;
 
     @ManyToOne
@@ -26,5 +34,8 @@ public class Authority {
     @Column(name = "role")
     private String role;
 
-
+    public Authority(User user, String role) {
+        this.user = user;
+        this.role = role;
+    }
 }
