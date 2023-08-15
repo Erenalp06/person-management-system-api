@@ -95,10 +95,9 @@ public class PersonController {
     }
 
 
-
+    // TODO monitor the application with Actuator
     // TODO add unit tests and integration tests
     // TODO just look at pagination
-    // TODO monitor the application with Actuator
     // TODO rate limit the API
 
 }
