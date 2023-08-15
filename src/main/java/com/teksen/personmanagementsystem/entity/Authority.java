@@ -14,17 +14,26 @@ import lombok.NoArgsConstructor;
 @Builder
 public class Authority {
 
-
+    @SequenceGenerator(
+            name = "authority_sequence",
+            sequenceName = "authority_sequence",
+            allocationSize = 1
+    )
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "authority_sequence"
+    )
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
     @ManyToOne
     @JoinColumn(name = "username", referencedColumnName = "username")
     private User user;
 
-    @Column(name = "role")
     private String role;
 
-
+    public Authority(User user, String role) {
+        this.user = user;
+        this.role = role;
+    }
 }

@@ -52,6 +52,12 @@
 			<version>2.2.0</version>
 		</dependency>
 
+		<!-- Spring Boot Actuator -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+
 
 
 		<!-- Spring Boot Devtools -->
@@ -83,10 +89,11 @@
 			<scope>test</scope>
 		</dependency>
 
-<!--	Logging	-->
-
-
-
+		<!-- flyway migration -->
+		<dependency>
+			<groupId>org.flywaydb</groupId>
+			<artifactId>flyway-core</artifactId>
+		</dependency>
 
 
 
@@ -107,6 +114,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>person-management-system-api-v1.0</finalName>
 	</build>
 
 </project>

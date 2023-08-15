@@ -93,12 +93,4 @@ public class PersonController {
         personService.deleteById(id);
         return ResponseEntity.ok("Person deleted");
     }
-
-    // TODO add Flyway migration
-    // TODO add Basic Authentication
-    // TODO add unit tests and integration tests
-    // TODO just look at pagination
-    // TODO monitor the application with Actuator
-    // TODO rate limit the API
-
 }
