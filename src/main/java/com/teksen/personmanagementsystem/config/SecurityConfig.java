@@ -48,6 +48,7 @@ public class SecurityConfig {
                         .requestMatchers(HttpMethod.PUT, "/api/v*/authority/**").hasAnyRole(ROLE.ADMIN.name())
                         .requestMatchers(HttpMethod.DELETE, "/api/v*/authority/**").hasAnyRole(ROLE.ADMIN.name())
                         .requestMatchers(HttpMethod.POST, "/api/v*/authority/**").hasAnyRole(ROLE.ADMIN.name())
+                        .requestMatchers(HttpMethod.GET, "/actuator/**").hasAnyRole(ROLE.ADMIN.name())
 
 
         );

@@ -52,6 +52,12 @@
 			<version>2.2.0</version>
 		</dependency>
 
+		<!-- Spring Boot Actuator -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+
 
 
 		<!-- Spring Boot Devtools -->
@@ -88,6 +94,8 @@
 			<groupId>org.flywaydb</groupId>
 			<artifactId>flyway-core</artifactId>
 		</dependency>
+
+
 
 	</dependencies>
 
