@@ -9,6 +9,11 @@ The Person Management System API is a powerful Spring Boot application that allo
 including listing, adding, and updating people in a database.
 It even intelligently retrieves missing individuals from an external source when necessary, ensuring accurate and efficient data management.
 
+## Requirements
+- Java 8 or higher
+- PostgreSQL database
+- Docker (optional, for containerization of the project)
+
 ## Used Technologies
   - Java 8+
   - Spring Boot
@@ -24,6 +29,7 @@ It even intelligently retrieves missing individuals from an external source when
   - Validation (Hibernate Validator)
   - External API Integration
   - Git for Version Control
+  - Logging with slf4j
 
 ## Features
   - List, add, and update people in the database
@@ -37,6 +43,7 @@ It even intelligently retrieves missing individuals from an external source when
   - Database operations with Data JPA
   - Ensure data integrity with validation
   - Improve performance with asynchronous processing
+  - Using logger for both functionality and feature tracking
 
 ## Getting Started
 
@@ -83,6 +90,20 @@ This command will build the docker containers and start them.
 docker-compose up
 ```
 
+Appendix A.
+
+All commands should be run from project root (where docker-compose.yml locates)
+
+* If you have to want to see running containers.
+Checklist docker containers
+```bash
+docker container list -a
+```
+or
+```bash
+docker-compose ps
+```
+
 The app will start running at <http:localhost:9643>
 
 **5. Swagger Documentation**
@@ -90,5 +111,55 @@ The app will start running at <http:localhost:9643>
 ```bash
 http://localhost:9643/swagger-ui.html 
 ```
+
+## Contributing
+
+Contributions are welcome! For significant changes, please open an issue to discuss first.
+
+  1. Fork this repository.
+  2. Create a new branch (git checkout -b feature/AmazingFeature).
+  3. Make changes and commit them (git commit -m 'Add some AmazingFeature').
+  4. Push to your branch (git push origin feature/AmazingFeature).
+  5. Open a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.<br>
+Developer: Erenalp TEKŞEN <br>
+Project Link: https://github.com/Erenalp06/person-management-system-api
+
+## Explore Rest API's
+
+The app defines following CRUP APIs.
+
+### Users
+
+| Method | URL | Description | Sample Valid Request Body |
+| ------ | --- | ----------- | ------------------------- |
+| GET    | /api/v1/users | Get all users | |
+| GET    | /api/v1/users/{username} | Get user by username | |
+| POST   | /api/v1/users | Create new user | [JSON](#usercreate) |
+| PUT    | /api/v1/users/{userId} | Update user | |
+| DELETE | /api/v1/users/{username} | Delete user by username | |
+
+### People
+
+| Method | URL | Description | Sample Valid Request Body |
+| ------ | --- | ----------- | ------------------------- |
+| GET    | /api/v1/people | Get all people | |
+| GET    | /api/v1/people/{id} | Get person by id| |
+| POST   | /api/v1/people | Create new person | [JSON](#usercreate) |
+| PUT    | /api/v1/people/{id} | Update person by id | |
+| DELETE | /api/v1/people/{id} | Delete user by id | |
+
+### Authority
+
+| Method | URL | Description | Sample Valid Request Body |
+| ------ | --- | ----------- | ------------------------- |
+| GET    | /api/v1/authorities/{username} | Get a list of authorities by username | |
+| POST   | /api/v1/authorities/{username}/{roleName} | Create new authority by username | [JSON](#usercreate) |
+| PUT    | /api/v1/authorities/{username}/{roleName} | Update user authority by roleName | |
+| DELETE | /api/v1/authorities/{username}/{roleName} | Delete user authority by roleName | |
+
 
 
