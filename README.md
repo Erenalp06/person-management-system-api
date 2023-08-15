@@ -138,7 +138,7 @@ The app defines following CRUP APIs.
 | ------ | --- | ----------- | ------------------------- |
 | GET    | /api/v1/users | Get all users | |
 | GET    | /api/v1/users/{username} | Get user by username | |
-| POST   | /api/v1/users | Create new user | [JSON](#usercreate) |
+| POST   | /api/v1/users | Create new user | [JSON](#) |
 | PUT    | /api/v1/users/{userId} | Update user | |
 | DELETE | /api/v1/users/{username} | Delete user by username | |
 
@@ -148,7 +148,7 @@ The app defines following CRUP APIs.
 | ------ | --- | ----------- | ------------------------- |
 | GET    | /api/v1/people | Get all people | |
 | GET    | /api/v1/people/{id} | Get person by id| |
-| POST   | /api/v1/people | Create new person | [JSON](#usercreate) |
+| POST   | /api/v1/people | Create new person | [JSON](#) |
 | PUT    | /api/v1/people/{id} | Update person by id | |
 | DELETE | /api/v1/people/{id} | Delete user by id | |
 
@@ -157,7 +157,7 @@ The app defines following CRUP APIs.
 | Method | URL | Description | Sample Valid Request Body |
 | ------ | --- | ----------- | ------------------------- |
 | GET    | /api/v1/authorities/{username} | Get a list of authorities by username | |
-| POST   | /api/v1/authorities/{username}/{roleName} | Create new authority by username | [JSON](#usercreate) |
+| POST   | /api/v1/authorities/{username}/{roleName} | Create new authority by username | [JSON](#) |
 | PUT    | /api/v1/authorities/{username}/{roleName} | Update user authority by roleName | |
 | DELETE | /api/v1/authorities/{username}/{roleName} | Delete user authority by roleName | |
 
