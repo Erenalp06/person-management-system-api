@@ -9,12 +9,19 @@ The Person Management System API is a powerful Spring Boot application that allo
 including listing, adding, and updating people in a database.
 It even intelligently retrieves missing individuals from an external source when necessary, ensuring accurate and efficient data management.
 
-## Requirements
+* [Requirements](#requirements)
+* [Used Technologies](#used-technologies)
+* [Features](#features)
+* [Getting Started](#getting-started)
+* [License](#license)
+* [Explore Rest API](#explore-rest-api)
+
+## Requirements ##
 - Java 8 or higher
 - PostgreSQL database
 - Docker (optional, for containerization of the project)
 
-## Used Technologies
+## Used Technologies ## 
   - Java 8+
   - Spring Boot
   - Spring Data JPA
@@ -31,7 +38,7 @@ It even intelligently retrieves missing individuals from an external source when
   - Git for Version Control
   - Logging with slf4j
 
-## Features
+## Features ##
   - List, add, and update people in the database
   - Retrieve missing persons from an external API source
   - Caching mechanism improves performance
@@ -45,7 +52,7 @@ It even intelligently retrieves missing individuals from an external source when
   - Improve performance with asynchronous processing
   - Using logger for both functionality and feature tracking
 
-## Getting Started
+## Getting Started ##
 
 Follow these steps to run the project on your local machine.
 
@@ -112,7 +119,7 @@ The app will start running at <http:localhost:9643>
 http://localhost:9643/swagger-ui.html 
 ```
 
-## Contributing
+## Contributing ##
 
 Contributions are welcome! For significant changes, please open an issue to discuss first.
 
@@ -122,13 +129,13 @@ Contributions are welcome! For significant changes, please open an issue to disc
   4. Push to your branch (git push origin feature/AmazingFeature).
   5. Open a Pull Request.
 
-## License
+## License ##
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.<br>
 Developer: Erenalp TEKŞEN <br>
 Project Link: https://github.com/Erenalp06/person-management-system-api
 
-## Explore Rest API's
+## Explore Rest API's ##
 
 The app defines following CRUP APIs.
 
