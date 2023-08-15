@@ -135,7 +135,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 Developer: Erenalp TEKŞEN <br>
 Project Link: https://github.com/Erenalp06/person-management-system-api
 
-## Explore Rest API's ##
+## Explore Rest API ##
 
 The app defines following CRUP APIs.
 
