@@ -1,5 +1,6 @@
 package com.teksen.personmanagementsystem.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
@@ -32,6 +33,7 @@ public class PersonDTO {
     @Schema(description = "Birth date of the person", example = "1990-01-01")
     private LocalDate birthDate;
 
+    @JsonIgnore
     public boolean isEmpty() {
         return firstName == null && lastName == null && email == null && birthDate == null;
     }
