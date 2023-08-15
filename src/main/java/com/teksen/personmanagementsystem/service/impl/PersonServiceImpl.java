@@ -2,16 +2,15 @@ package com.teksen.personmanagementsystem.service.impl;
 
 import com.teksen.personmanagementsystem.dto.PersonDTO;
 import com.teksen.personmanagementsystem.entity.Person;
-import com.teksen.personmanagementsystem.exception.custom.PersonCanNotBeNullException;
-import com.teksen.personmanagementsystem.exception.custom.PersonIdCanNotBeNullException;
-import com.teksen.personmanagementsystem.exception.custom.PersonNotFoundException;
+import com.teksen.personmanagementsystem.exception.custom.person.PersonCanNotBeNullException;
+import com.teksen.personmanagementsystem.exception.custom.person.PersonIdCanNotBeNullException;
+import com.teksen.personmanagementsystem.exception.custom.person.PersonNotFoundException;
 import com.teksen.personmanagementsystem.repository.PersonRepository;
 import com.teksen.personmanagementsystem.service.PersonService;
 import com.teksen.personmanagementsystem.util.PersonMapper;
 import lombok.AllArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
@@ -19,7 +18,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.time.LocalDate;
 import java.util.List;
 
 @Service
@@ -77,7 +75,7 @@ public class PersonServiceImpl implements PersonService {
     @CachePut(cacheNames = CACHE_NAME, key = "#personDTO.id")
     public PersonDTO update(PersonDTO personDTO) {
 
-        if(personDTO == null){
+        if(personDTO == null || personDTO.isEmpty()){
             logger.error(PERSON_CAN_NOT_BE_NULL);
             throw new PersonNotFoundException(PERSON_CAN_NOT_BE_NULL, HttpStatus.BAD_REQUEST);
 
@@ -123,7 +121,7 @@ public class PersonServiceImpl implements PersonService {
     @CachePut(cacheNames = CACHE_NAME, key = "#result.id")
     public PersonDTO save(PersonDTO personDTO) {
 
-        if(personDTO == null){
+        if(personDTO == null || personDTO.isEmpty()){
             logger.error(PERSON_CAN_NOT_BE_NULL);
             throw new PersonCanNotBeNullException(PERSON_CAN_NOT_BE_NULL, HttpStatus.BAD_REQUEST);
 
@@ -155,7 +153,7 @@ public class PersonServiceImpl implements PersonService {
 
     public void simulateBackendCall() {
         try {
-            System.out.println("------------- Going to sleep for 5 seconds to simulate Backend Delay -----------");
+            logger.info("------------- Going to sleep for 5 seconds to simulate Backend Delay -----------");
             Thread.sleep(5 * 1000);
         } catch (InterruptedException e) {
             e.printStackTrace();

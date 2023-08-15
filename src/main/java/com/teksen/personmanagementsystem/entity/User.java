@@ -27,6 +27,6 @@ public class User {
     @Column(name = "enabled")
     private Boolean enabled;
 
-    @OneToMany(mappedBy = "user")
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Authority> authorities = new ArrayList<>();
 }
